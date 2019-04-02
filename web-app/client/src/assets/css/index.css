@@ -1,0 +1,40 @@
+  .navbar-brand {
+    color: #18bc9c!important;
+  }
+  
+  .list-group a {
+    margin-bottom: 10px;
+    display: block;
+  }
+  
+  .badge {
+    padding: 7px;
+  }
+  
+  .container.body {
+    min-height: calc(100vh - 252px);
+  }
+
+  .logoImg{
+    width: 15%;
+    height: 15%;
+  }
+
+  /* cars */
+
+  .carInfo {
+    text-align: center;
+    border-radius: 3px;
+    height: 180px;
+    margin: 15px;
+    display: block;
+    overflow: scroll;
+    transition: border 0.25s ease-out;
+    border: 1px solid #0a6075;
+  }
+
+  .carInfoItem {
+    text-align: left;
+    margin: 10px;
+  }
+  
