@@ -5,6 +5,7 @@ import Home from '@/components/Home'
 import CreateCar from '@/components/CreateCar'
 import ChangeCarOwner from '@/components/ChangeCarOwner'
 import QueryAllCars from '@/components/QueryAllCars'
+import ShowBlockchain from '@/components/ShowBlockchain'
 
 Vue.use(Router)
 
@@ -29,6 +30,11 @@ export default new Router({
       path: '/queryAllCars',
       name: 'QueryAllCars',
       component: QueryAllCars
+    },
+    {
+      path: '/showBlockchain',
+      name: 'ShowBlockchain',
+      component: ShowBlockchain
     }
   ]
 })

@@ -21,7 +21,6 @@
               <p class="carInfoItem">型号：{{ carEntry.Record.model }}</p>
               <p class="carInfoItem">颜色：{{ carEntry.Record.color }}</p>
               <p class="carInfoItem">车主：{{ carEntry.Record.owner }}</p>
-              <!-- <img alt="thumbnail" :title="book.title" :src="book.thumbnail" /> -->
             </div>
           </div>
         </div>

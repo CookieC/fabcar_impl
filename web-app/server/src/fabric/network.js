@@ -45,7 +45,6 @@ exports.createCar = async function(key, make, model, color, owner) {
 
         // Get the network (channel) our contract is deployed to.
         const network = await gateway.getNetwork('mychannel');
-
         // Get the contract from the network.
         const contract = network.getContract('fabcar');
 
@@ -145,7 +144,6 @@ exports.queryAllCars = async function() {
 
         // Get the network (channel) our contract is deployed to.
         const network = await gateway.getNetwork('mychannel');
-
         // Get the contract from the network.
         const contract = network.getContract('fabcar');
 

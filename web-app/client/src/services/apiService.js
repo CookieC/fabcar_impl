@@ -17,5 +17,8 @@ export default {
   },
   queryAllCars() {
     return Api().get('queryAllCars')
+  },
+  showBlockchain(){
+    return Api().get('getBlockchain')
   }
 }
