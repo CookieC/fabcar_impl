@@ -4,10 +4,7 @@
     <!-- <div v-bind:key="carEntry.Key" v-for="carEntry in response" >
       <p> {{ carEntry.Key }} | {{ carEntry.Record }}  </p>
     </div>-->
-    <div class="progress progress-striped active" v-if="loading">
-      <div class="progress-bar" style="width: 100%"></div>
-    </div>
-    <div v-else>
+    <div>
       <template v-if="response && response.length > 0">
         <div class="row">
           <div

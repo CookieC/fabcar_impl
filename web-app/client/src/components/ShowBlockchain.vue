@@ -7,14 +7,20 @@
 
     <div>
       <template v-if="response && response.length>0">
-          <div class="row">
-            <div v-bind:key="block.number" v-for="block in response">
-              <div class="carInfo">
-                <p>Block number：{{ block.number }}</p>
-                <p class="carInfoItem">Data hash：{{ block.data_hash }}</p>
+        <div class="row">
+          <div v-bind:key="block.number" v-for="block in response">
+            <div class="carInfo">
+              <p>Block number：{{ block.number }}</p>
+              <p class="carInfoItem">Data hash：{{ block.data_hash }}</p>
+              <p class="carInfoItem">Transaction number：{{ block.num_transactions }}</p>
+              <div v-bind:key="tx.id" v-for="tx in block.transactions">
+                <p class="carInfoItem">Transaction ID：{{ tx.id }}</p>
+                <p class="carInfoItem">Timestamp：{{ tx.timestamp }}</p>
+                <p class="carInfoItem">RWsets：{{ tx.ns_rwsets }}</p>
               </div>
             </div>
           </div>
+        </div>
       </template>
     </div>
   </div>

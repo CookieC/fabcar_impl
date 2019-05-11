@@ -1,21 +1,3 @@
-/*   old version (v1.1) modify to v1.4 
-const Fabric_Client = require('fabric-client');
-var path = require('path');
-
-var fabric_client = new Fabric_Client();
-
-// setup the fabric network
-var channel = fabric_client.newChannel('mychannel');
-var peer = fabric_client.newPeer('grpc://localhost:17051');
-channel.addPeer(peer);
-var order = fabric_client.newOrderer('grpc://localhost:17050')
-channel.addOrderer(order);
-
-//get location of user1 ca info
-var store_path = path.join(__dirname, '../wallet', 'user1'); 
-//console.log('Store path:'+store_path);
-*/
-
 'use strict'
 const { FileSystemWallet, Gateway, X509WalletMixin } = require('fabric-network');
 const fs = require('fs');
@@ -42,32 +24,6 @@ exports.getBlockchain = async function() {
     var response={};
     var returnBlockchain = [];
 
-    /*  v1.1
-    var state_store = await Fabric_Client.newDefaultKeyValueStore({
-      path: store_path
-    });
-
-    fabric_client.setStateStore(state_store);
-    var crypto_suite = Fabric_Client.newCryptoSuite();
-    // use the same location for the state store (where the users' certificate are kept)
-    // and the crypto store (where the users' keys are kept)
-    var crypto_store = Fabric_Client.newCryptoKeyStore({
-      path: store_path
-    });
-    crypto_suite.setCryptoKeyStore(crypto_store);
-    fabric_client.setCryptoSuite(crypto_suite);
-
-    // get the enrolled user from persistence, this user will sign all requests
-    user_from_store = await fabric_client.getUserContext('user1', true);
-
-    if (user_from_store && user_from_store.isEnrolled()) {
-      //console.log('Successfully loaded user1 from persistence');
-      //未使用member_user
-      member_user = user_from_store;
-    } else {
-      throw new Error('Failed to get user1.... run registerUser.js');
-    }
-    */
    const walletPath=path.join(process.cwd(),'/wallet');
    const wallet = new FileSystemWallet(walletPath);
    console.log(`Wallet path: ${walletPath}`);
