@@ -3,7 +3,7 @@
     <div class="col-lg-offset-3 col-lg-6">
       <form class="form-horizontal">
         <fieldset>
-          <legend>更改车主</legend>
+          <legend>交易车辆</legend>
           <!--span><b>{{ response }}</b></span><br /-->
           <div class="form-group">
             <label class="col-lg-3 control-label" >车辆</label>
@@ -25,7 +25,7 @@
             </div>
           </div>
           <div class="col-lg-9 col-lg-offset-2">
-            <button class="btn btn-primary" v-on:click="changeCarOwner()">更改车主</button>
+            <button class="btn btn-primary" v-on:click="changeCarOwner()">提交</button>
           </div>
         </fieldset>
       </form>

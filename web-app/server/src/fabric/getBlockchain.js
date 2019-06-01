@@ -54,6 +54,7 @@ exports.getBlockchain = async function() {
       var block = await channel.queryBlock(i);
 
       returnBlock.number = block.header.number;
+      returnBlock.pre_hash = block.header.previous_hash;
       returnBlock.data_hash = block.header.data_hash;
 
       var transactions = [];

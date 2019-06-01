@@ -11,6 +11,7 @@
           <div v-bind:key="block.number" v-for="block in response">
             <div class="carInfo">
               <p>Block number：{{ block.number }}</p>
+              <!-- <p class="carInfoItem">Previous Hash：{{ block.pre_hash }}</p> -->
               <p class="carInfoItem">Data hash：{{ block.data_hash }}</p>
               <p class="carInfoItem">Transaction number：{{ block.num_transactions }}</p>
               <div v-bind:key="tx.id" v-for="tx in block.transactions">

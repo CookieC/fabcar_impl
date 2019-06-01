@@ -12,7 +12,7 @@
           <router-link to="/createCar">新增车辆</router-link>
         </li>
         <li>
-          <router-link to="/changeCarOwner">更改车主</router-link>
+          <router-link to="/changeCarOwner">交易车辆</router-link>
         </li>
         <li>
           <router-link to="/showBlockchain">查看区块信息</router-link>
